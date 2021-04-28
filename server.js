@@ -36,12 +36,12 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 // allow POST, PUT and DELETE from a form
 app.use(methodOverride('_method'))
 
-// app.use(session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// )
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
 
 ///////////////////////////////////
 ////// DATABASE
