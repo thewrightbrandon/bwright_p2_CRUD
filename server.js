@@ -59,15 +59,25 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 ////// CONTROLLERS
 ///////////////////////////////////
 
+const friendsController = require('./controllers/friends_controller.js')
+app.use('/friends', friendsController)
+
 
 
 ///////////////////////////////////
 ////// WELCOME ROUTE
 ///////////////////////////////////
 
-//localhost:3000
 app.get('/', (req, res) => {
   res.send('Hello World!')
+})
+
+///////////////////////////////////
+////// ABOUT ROUTE
+///////////////////////////////////
+
+app.get('/about', (req, res) => {
+  res.send('About Us!')
 })
 
 ///////////////////////////////////
