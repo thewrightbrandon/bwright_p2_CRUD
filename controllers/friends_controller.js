@@ -14,123 +14,123 @@ const router = express.Router()
 ////// SEED ROUTE
 ///////////////////////////////////
 
-router.get('/seed', (req, res) => {
-  Friend.create(
-    [
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-      {
-        name: ,
-        age: ,
-        gender: ,
-        breed: ,
-        img: ,
-        available: ,
-        description:
-      },
-    ],
-    (err, createdFriend) => {
-      res.redirect('/friends')
-    }
-  )
-})
+// router.get('/seed', (req, res) => {
+//   Friend.create(
+//     [
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//       {
+//         name: ,
+//         age: ,
+//         gender: ,
+//         breed: ,
+//         img: ,
+//         available: ,
+//         description:
+//       },
+//     ],
+//     (err, createdFriend) => {
+//       res.redirect('/friends')
+//     }
+//   )
+// })
 
 ///////////////////////////////////
 ////// INDEX ROUTE
