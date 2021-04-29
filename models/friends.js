@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const friendsSchema = new Schema({
   name: {type: String, required: true},
   age: {type: Number, required: true},
+  type: {type: String, required: true},
   gender: String,
   breed: String,
   img: String,
