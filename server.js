@@ -79,7 +79,11 @@ app.use('/sessions', userSessionsController)
 ///////////////////////////////////
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('friends/welcome.ejs',
+    {
+      tabTitle: 'Welcome!'
+    }
+  )
 })
 
 ///////////////////////////////////
