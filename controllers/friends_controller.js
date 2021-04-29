@@ -225,7 +225,7 @@ router.put('/:id', (req, res) => {
       req.body.available = false;
     }
   Friend.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, foundFriend) => {
-    res.redirect(`friends/${foundFriend.id}`)
+    res.redirect(`/friends/${foundFriend.id}`)
   })
 })
 

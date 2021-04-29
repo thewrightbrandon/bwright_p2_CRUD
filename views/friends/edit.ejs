@@ -5,5 +5,93 @@
 
   <body>
 
+    <div class="container">
+
+      <nav class="navbar">
+
+        <%-include('../partials/nav.ejs')%>
+
+      </nav>
+
+      <div class="backButton">
+        <a class="btn btn-outline-secondary"href="/friends">See More Friends</a>
+      </div>
+
+      <form class="editForm" action="/friends/<%=friend.id%>?_method=PUT" method="POST">
+
+        <fieldset class="mt-5">
+
+          <legend>UPDATE FRIEND</legend>
+
+          <div class="row mt-4 mb-4">
+            <div class="col-6">
+              <label class="form-label">Name</label>
+              <input type="text" name="name" class="form-control" value="<%=friend.name%>"/>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Type of Animal</label>
+              <input type="text" name="type" class="form-control" value="<%=friend.type%>"/>
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="form-label">Age</label>
+              <input type="text" name="age" class="form-control" value="<%=friend.age%>"/>
+            </div>
+            <div class="col">
+              <label class="form-label">Breed</label>
+              <input type="text" name="breed" class="form-control" value="<%=friend.breed%>"/>
+            </div>
+            <div class="col">
+              <label class="form-label">Gender</label>
+              <select class="form-select" name="gender">
+                <option selected><%=friend.gender%></option>
+                <% if(friend.gender === 'Female') { %>
+                  <option>Male</option>
+                <% } else { %>
+                  <option>Female</option>
+                <% } %>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="form-label">Image URL</label>
+              <input type="text" name="img" class="form-control" value="<%=friend.img%>"/>
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="form-label">Description</label>
+              <textarea type="text" name="description" class="form-control" rows="3"><%=friend.description%></textarea>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="form-check">
+              <input
+              class="form-check-input"
+              name="available"
+              type="checkbox"
+              id="gridCheck"
+              <% if(friend.available === true) { %>
+                checked
+              <% } %>
+              />
+              <label class="form-check-label">Is Friend Available?</label>
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="UPDATE" />
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
   </body>
 </html>
