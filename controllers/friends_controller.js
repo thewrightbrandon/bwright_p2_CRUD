@@ -175,7 +175,7 @@ router.delete('/:id', (req, res) => {
 ///////////////////////////////////
 
 router.get('/new', (req, res) => {
-  res.render('/friends/new.ejs',
+  res.render('friends/new.ejs',
     {
       tabTitle: 'New',
     }
@@ -187,6 +187,11 @@ router.get('/new', (req, res) => {
 ///////////////////////////////////
 
 router.post('/', (req, res) => {
+  if(req.body.available === 'on') {
+      req.body.available = true;
+    } else {
+      req.body.available = false;
+    }
   Friend.create(req.body, (err, createdFriend) => {
     res.redirect('/friends')
   })
@@ -213,8 +218,13 @@ router.get('/:id/edit', (req, res) => {
 ///////////////////////////////////
 
 router.put('/:id', (req, res) => {
+  if(req.body.available === 'on') {
+      req.body.available = true;
+    } else {
+      req.body.available = false;
+    }
   Friend.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, foundFriend) => {
-    res.redirect(`/prodcuts/${foundFriend.id}`)
+    res.redirect(`friends/${foundFriend.id}`)
   })
 })
 
@@ -241,7 +251,7 @@ router.get('/:id', (req, res) => {
 router.put('/:id/adopt', (req, res) => {
   Friend.findById(req.params.id, (err, foundFriend) => {
     foundFriend.save(foundFriend.available = false)
-    res.redirect(`/friends/${foundFriend.id}`)
+    res.redirect(`friends/${foundFriend.id}`)
   })
 })
 

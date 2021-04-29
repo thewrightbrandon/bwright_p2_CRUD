@@ -5,5 +5,82 @@
 
   <body>
 
+    <div class="container">
+
+      <nav class="navbar">
+
+        <%-include('../partials/nav.ejs')%>
+
+      </nav>
+
+      <div class="backButton">
+        <a class="btn btn-outline-secondary"href="/friends">See More Friends</a>
+      </div>
+
+      <form class="newForm" action="/friends" method="POST">
+
+        <fieldset class="mt-5">
+
+          <legend>NEW FRIEND</legend>
+
+          <div class="row mt-4 mb-4">
+            <div class="col-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-6">
+              <label class="form-label">Type of Animal</label>
+              <input type="text" class="form-control" placeholder="ie Dog, Cat, Rabbit, etc.">
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="form-label">Age</label>
+              <input type="text" class="form-control" placeholder="#">
+            </div>
+            <div class="col">
+              <label class="form-label">Breed</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="col">
+              <label class="form-label">Gender</label>
+              <select class="form-select">
+                <option selected>Choose...</option>
+                <option>Female</option>
+                <option>Male</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="form-label">Image URL</label>
+              <input type="text" class="form-control" placeholder="Valid URL">
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="form-label">Description</label>
+              <textarea type="text" class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="col-12 mb-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" placeholder="">
+              <label class="form-check-label">Is Friend Available?</label>
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="ADD FRIEND" />
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
   </body>
 </html>
