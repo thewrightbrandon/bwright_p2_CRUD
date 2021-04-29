@@ -193,6 +193,7 @@ router.post('/', (req, res) => {
       req.body.available = false;
     }
   Friend.create(req.body, (err, createdFriend) => {
+    console.log(createdFriend)
     res.redirect('/friends')
   })
 })
