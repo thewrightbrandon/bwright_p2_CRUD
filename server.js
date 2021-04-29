@@ -91,7 +91,11 @@ app.get('/', (req, res) => {
 ///////////////////////////////////
 
 app.get('/about', (req, res) => {
-  res.send('About Us!')
+  res.render('friends/about.ejs',
+    {
+      tabTitle: 'About'
+    }
+  )
 })
 
 ///////////////////////////////////
