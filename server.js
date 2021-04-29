@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 3003
 app.use(express.static('public'))
 
 // populates req.body with parsed info from forms
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({extended: true}))
 
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it
 
