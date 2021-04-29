@@ -49,7 +49,7 @@ app.use(session({
 
 const MONGODB_URI = process.env.MONGODB_URI
 
-mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
 
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI))
@@ -62,7 +62,17 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 const friendsController = require('./controllers/friends_controller.js')
 app.use('/friends', friendsController)
 
+const adminsController = require('./controllers/admin_users_controller.js')
+app.use('/admins', adminsController)
 
+const usersController = require('./controllers/client_users_controller.js')
+app.use('/users', usersController)
+
+const adminSessionsController = require('./controllers/admin_sessions_controller.js')
+app.use('/sessions', adminSessionsController)
+
+const userSessionsController = require('./controllers/client_sessions_controller.js')
+app.use('/sessions', userSessionsController)
 
 ///////////////////////////////////
 ////// WELCOME ROUTE
