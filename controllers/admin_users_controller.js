@@ -4,7 +4,7 @@ const admins = express.Router()
 const Admin = require('../models/admin_users.js')
 
 
-admins.get('/new_admin', (req, res) => {
+admins.get('/new_admin_secret_signup', (req, res) => {
   res.render('users/admin_users_new.ejs',
     {
       currentUser: req.session.currentUser,

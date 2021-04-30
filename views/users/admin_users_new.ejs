@@ -13,11 +13,17 @@
 
       </nav>
 
-      <form class="newForm" action="/admins" method="POST">
+      <form class="needs-validation newForm" action="/admins" method="POST" oninput='password2.setCustomValidity'(password2.value !== password.value ? "Passwords do not match." : "") />
 
         <fieldset>
 
           <legend>Welcome to the Team!</legend>
+
+            <div class="row mt-4 mb-4">
+              <label for="email">Email</label>
+              <input class="col-6" type="email" name="email" required />
+
+            </div>
 
             <div class="row mt-4 mb-4">
               <label for="username">Username</label>
@@ -26,7 +32,7 @@
 
             <div class="row row mt-4 mb-4">
               <label for="password">Password</label>
-              <input class="col-6" type="password" name="password" />
+              <input class="col-6" type="password" name="password" required />
             </div>
 
             <input class="btn btn-primary" type="submit" value="Register" />
