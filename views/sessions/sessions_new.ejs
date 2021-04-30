@@ -4,32 +4,36 @@
   <%-include('../partials/head.ejs')%>
 
   <body class="background2">
-    
+
     <div class="container">
 
-      <nav class="nav">
+      <form class="newForm" action="/sessions" method="POST" />
 
-        <%-include('../partials/nav.ejs')%>
+        <fieldset class="sessionFieldset">
 
-      </nav>
+          <legend>Great to see you!</legend>
 
-      <form class="newForm" action="/sessions" method="POST">
-
-        <fieldset>
-
-          <legend>Good to see you!</legend>
+          <div class="row mb-4">
+            <div class="col">
+              <label class="sessionLabel" for="username">Username</label>
+              <input class="form-control" type="text" name="username" required />
+            </div>
+          </div>
 
           <div class="row mt-4 mb-4">
-            <label for="username">Username</label>
-            <input class="col-6" type="text" name="username" required />
+            <div class="col">
+              <label class="sessionLabel" for="password">Password</label>
+              <input class="form-control" type="password" name="password" />
+            </div>
           </div>
 
-          <div class="row row mt-4 mb-4">
-            <label for="password">Password</label>
-            <input class="col-6" type="password" name="password" />
+          <div class="newLogin">
+            <input class="btn btn-primary newLoginBtn" type="submit" value="Log In" />
           </div>
 
-          <input class="btn btn-primary" type="submit" value="Login" />
+          <div class="backButton">
+            <a class="btn btn-outline-secondary"href="/">Back</a>
+          </div>
 
         </fieldset>
 

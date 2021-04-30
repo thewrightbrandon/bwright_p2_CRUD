@@ -4,7 +4,7 @@ const sessions = express.Router()
 const Admin = require('../models/admin_users.js')
 
 
-sessions.get('/new_admin', (req, res) => {
+sessions.get('/new', (req, res) => {
   res.render('sessions/sessions_new.ejs',
     {
       currentUser: req.session.currentUser,

@@ -3,38 +3,45 @@
 
   <%-include('../partials/head.ejs')%>
 
-  <body>
+  <body class="background2">
 
     <div class="container">
 
-      <nav class="navbar">
+      <form class="newForm" action="/users" method="POST" />
 
-        <%-include('../partials/nav.ejs')%>
-
-      </nav>
-
-      <form class="needs-validation newForm" action="/users" method="POST" oninput='password2.setCustomValidity'(password2.value !== password.value ? "Passwords do not match." : "") />
-
-        <fieldset>
+        <fieldset class="userSignupFieldset">
 
           <legend>Welcome!</legend>
 
-            <div class="row mt-4 mb-4">
-              <label for="email">Email</label>
-              <input class="col-6" type="email" name="email" required />
+            <div class="row mb-4">
+              <div class="col">
+                <label class="userSignupLabel" for="email">Email</label>
+                <input class="form-control" type="email" name="email" required />
+              </div>
             </div>
 
             <div class="row mt-4 mb-4">
-              <label for="username">Username</label>
-              <input class="col-6" type="text" name="username" required />
+              <div class="col">
+                <label class="userSignupLabel" for="username">Username</label>
+                <input class="form-control" type="text" name="username" required />
+                <small class="text-muted">username must be between 5-20 characters</small>
+              </div>
             </div>
 
             <div class="row row mt-4 mb-4">
-              <label for="password">Password</label>
-              <input class="col-6" type="password" name="password" required />
+              <div class="col">
+                <label class="userSignupLabel" for="password">Password</label>
+                <input class="form-control" type="password" name="password" required />
+              </div>
             </div>
 
-            <input class="btn btn-primary" type="submit" value="Register" />
+            <div class="userSignup">
+              <input class="btn btn-primary userSignupBtn" type="submit" value="Register" />
+            </div>
+
+            <div class="backButton">
+              <a class="btn btn-outline-secondary"href="/">Back</a>
+            </div>
 
         </fieldset>
 
