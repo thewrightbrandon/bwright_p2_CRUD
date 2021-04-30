@@ -1,0 +1,21 @@
+<ul class="navbar">
+  <% if(currentUser) { %>
+    <li>
+      <a class="nav-link active" href="/about">About</a>
+    </li>
+    <li>
+      <a class="nav-link active" href="/friends">Friends</a>
+    </li>
+    <li class="imgLi">
+      <img class="navImg" src="https://i.imgur.com/7KgFbJO.png" alt="Logos">
+    </li>
+    <li >
+      Welcome, <%=' ' + currentUser.username%>!
+    </li>
+    <li>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input class="btn btn-danger" type="submit" value="Log Out">
+      </form>
+    </li>
+  <% } %>
+</ul>

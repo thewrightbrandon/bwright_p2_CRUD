@@ -2,13 +2,13 @@ const express = require('express')
 const Friend = require('../models/friends.js')
 const router = express.Router()
 
-// const isAuthenticated = (req, res, next) => {
-//   if(req.session.currentUser) {
-//     return next()
-//   } else {
-//     res.redirect('/sessions/new')
-//   }
-// }
+const isAuthenticated = (req, res, next) => {
+  if(req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
 
 ///////////////////////////////////
 ////// SEED ROUTE
@@ -154,7 +154,7 @@ router.get('/', (req, res) => {
       {
         friends: allFriends,
         tabTitle: 'Friends',
-
+        currentUser: req.session.currentUser,
       }
     )
   })
@@ -178,6 +178,7 @@ router.get('/new', (req, res) => {
   res.render('friends/new.ejs',
     {
       tabTitle: 'New',
+      currentUser: req.session.currentUser,
     }
   )
 })
@@ -208,7 +209,7 @@ router.get('/:id/edit', (req, res) => {
       {
         friend: foundFriend,
         tabTitle: 'Edit',
-
+        currentUser: req.session.currentUser,
       }
     )
   })
@@ -239,7 +240,7 @@ router.get('/:id', (req, res) => {
       {
         friend: foundFriend,
         tabTitle: foundFriend.name,
-
+        currentUser: req.session.currentUser,
       }
     )
   })

@@ -93,7 +93,8 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('friends/about.ejs',
     {
-      tabTitle: 'About'
+      tabTitle: 'About',
+      currentUser: req.session.currentUser,
     }
   )
 })
