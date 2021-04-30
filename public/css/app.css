@@ -87,7 +87,7 @@ li>a:hover {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin: 25% auto;
+  margin: 20% auto;
   max-width: 600px;
 }
 
@@ -120,7 +120,7 @@ li>a:hover {
 .newForm {
   display: flex;
   justify-content: center;
-  margin: 25% auto;
+  margin: 18% auto;
 }
 
 .sessionFieldset, .userSignupFieldset, .adminSignupFieldset {
