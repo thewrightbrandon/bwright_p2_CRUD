@@ -40,7 +40,7 @@ sessions.post('/', (req, res) => {
       if(bcrypt.compareSync(req.body.password, foundUser.password)) {
         // if everything matches do this, user session has now started
         req.session.currentUser = foundUser
-        res.redirect("/friends")
+        res.redirect("/about")
       } else {
         // if password does not match do this
         res.send('Password did not match. <a href="sessions/new">Try Again?</a>')

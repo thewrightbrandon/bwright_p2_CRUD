@@ -216,6 +216,17 @@ router.get('/:id/edit', (req, res) => {
 })
 
 ///////////////////////////////////
+////// ADOPT ROUTE
+///////////////////////////////////
+
+router.put('/:id/adopt', (req, res) => {
+  Friend.findById(req.params.id, (err, foundFriend) => {
+    foundFriend.save(foundFriend.available = false)
+    res.redirect(`/friends/${foundFriend.id}`)
+  })
+})
+
+///////////////////////////////////
 ////// UPDATE ROUTE
 ///////////////////////////////////
 
@@ -245,22 +256,5 @@ router.get('/:id', (req, res) => {
     )
   })
 })
-
-///////////////////////////////////
-////// ADOPT ROUTE
-///////////////////////////////////
-
-router.put('/:id/adopt', (req, res) => {
-  if(req.body.available === 'on') {
-      req.body.available = true;
-    } else {
-      req.body.available = false;
-    }
-  Friend.findById(req.params.id, (err, foundFriend) => {
-    foundFriend.save(foundFriend.available = false)
-    res.redirect(`/friends/${foundFriend.id}`)
-  })
-})
-
 
 module.exports = router
