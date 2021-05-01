@@ -5,7 +5,7 @@ const Admin = require('../models/admin_users.js')
 
 
 sessions.get('/new_admin', (req, res) => {
-  res.render('sessions/sessions_new.ejs',
+  res.render('sessions/admin_sessions_new.ejs',
     {
       currentUser: req.session.currentUser,
       tabTitle: 'LOGIN'
@@ -14,8 +14,8 @@ sessions.get('/new_admin', (req, res) => {
 })
 
 
-sessions.post('/', (req, res) => {
-
+sessions.post('/admin', (req, res) => {
+// console.log('admin', req.body.username)
 
   // username is found and password matches - successful log in
 
@@ -28,6 +28,7 @@ sessions.post('/', (req, res) => {
 
   // find the user that matches the username input from the form
   Admin.findOne({username: req.body.username}, (err, foundAdmin) => {
+    // console.log(req.body.username)
     // if there was an error do this
     if(err) {
       console.log(err)

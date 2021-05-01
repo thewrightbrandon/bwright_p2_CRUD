@@ -5,7 +5,7 @@ const User = require('../models/client_users.js')
 
 
 sessions.get('/new', (req, res) => {
-  res.render('sessions/sessions_new.ejs',
+  res.render('sessions/client_sessions_new.ejs',
     {
       currentUser: req.session.currentUser,
       tabTitle: 'LOGIN'
@@ -14,8 +14,7 @@ sessions.get('/new', (req, res) => {
 })
 
 
-sessions.post('/', (req, res) => {
-
+sessions.post('/user', (req, res) => {
 
   // username is found and password matches - successful log in
 
@@ -33,7 +32,7 @@ sessions.post('/', (req, res) => {
       console.log(err)
       // if user was not found do this
     } else if (!foundUser) {
-      res.send('Username does not exist. <a href="sessions/new_admin">Try Again?</a>')
+      res.send('Username does not exist. <a href="sessions/new">Try Again?</a>')
       // user was found do this
     } else {
       // comparing original password to generated hash password

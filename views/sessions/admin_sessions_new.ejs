@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <%-include('../partials/head.ejs')%>
+
+  <body class="background2">
+
+    <div class="container">
+
+      <form class="newForm" action="/sessions/admin" method="POST" />
+
+        <fieldset class="sessionFieldset">
+
+          <legend>Great to see you!</legend>
+
+          <div class="row mb-4">
+            <div class="col">
+              <label class="sessionLabel" for="username">Username</label>
+              <input class="form-control" type="text" name="username" required />
+            </div>
+          </div>
+
+          <div class="row mt-4 mb-4">
+            <div class="col">
+              <label class="sessionLabel" for="password">Password</label>
+              <input class="form-control" type="password" name="password" />
+            </div>
+          </div>
+
+          <div class="newLogin">
+            <input class="btn btn-primary newLoginBtn" type="submit" value="Log In" />
+          </div>
+
+          <div class="backButton">
+            <a class="btn btn-outline-secondary"href="/">Back</a>
+          </div>
+
+        </fieldset>
+
+      </form>
+
+    </div>
+  </body>
+</html>
