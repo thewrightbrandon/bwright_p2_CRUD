@@ -21,53 +21,50 @@
 
           <h1><u><%=friend.name%></u></h1>
 
-          <div class="buttons">
-            <% if(friend.available === false) { %>
-              <p class="unavailable">ADOPTION PENDING</p>
-            <% } else { %>
-              <form action="/friends/<%=friend.id%>/adopt?_method=PUT" method="POST">
-                <input class="btn btn-primary"type="submit" value="ADOPT" />
-              </form>
-            <% } %>
-          </div>
-
           <% if(friend.img.includes('https://')) { %>
               <img class="showImg" src="<%=friend.img%>" alt="Picture of <%=friend.name%>">
           <% } else { %>
               <img class="showImg" src="https://i.imgur.com/lHR3vHp.png" alt="Image not found">
           <% } %>
 
-          <div class="buttons">
+          <div class="buttons2">
+            <% if(friend.available === false) { %>
+              <h4 class="unavailable">ADOPTION PENDING</h4>
+            <% } else { %>
+              <form action="/friends/<%=friend.id%>/adopt?_method=PUT" method="POST">
+                <input class="btn btn-primary showButton" type="submit" value="ADOPT" />
+              </form>
+            <% } %>
             <form action="/friends/<%=friend.id%>/edit" method="GET">
-              <input class="btn btn-success" type="submit" value="UPDATE" />
+              <input class="btn btn-success showButton" type="submit" value="UPDATE" />
             </form>
 
             <form action="/friends/<%=friend.id%>?_method=DELETE" method="POST">
-              <input class="btn btn-danger" type="submit" value="DELETE"  />
+              <input class="btn btn-danger showButton" type="submit" value="DELETE"  />
             </form>
           </div>
 
         </div>
 
         <div class="descriptionDiv">
-          <h1>About <%=friend.name%></h1><br/>
+          <h1>About <%=friend.name%>:</h1><br/>
             <% if(friend.available === true) { %>
             <h4>AVAILABLE</h4><br/>
             <% } else { %>
             <h4>ADOPTION PENDING</h4>
             <% } %>
-          <label><u>Breed</u></label>
-          <p><%=friend.breed%></p>
-          <label><u>Age</u></label>
-          <p><%=friend.age%></p>
-          <label><u>Animal Type</u></label>
-          <p><%=friend.type%></p>
-          <label><u>Breed</u></label>
-          <p><%=friend.breed%></p>
-          <label><u>Gender</u></label>
-          <p><%=friend.gender%></p>
-          <label><u>Description</u></label>
-          <p><%=friend.description%></p>
+
+          <p class="showText"><u>Age:</u> <%=friend.age%></p>
+
+          <p class="showText"><u>Animal Type:</u> <%=friend.type%></p>
+
+          <p class="showText"><u>Breed:</u> <%=friend.breed%></p>
+
+          <p class="showText"><u>Gender:</u> <%=friend.gender%></p>
+
+          <label class="showLabel"><u>Description</u></label>
+          <p class="showText"><%=friend.description%></p>
+
         </div>
 
       </div>

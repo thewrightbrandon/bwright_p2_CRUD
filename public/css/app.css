@@ -117,7 +117,79 @@ li>a:hover {
 
 /* INDEX PAGE */
 
+.indexDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+/* SHOW PAGE */
+
+.showDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.pictureDiv {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .7);
+  width: 50%;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 3% 2%;
+  text-align: center;
+}
+
+.showH1 {
+  color: ghostwhite;
+}
+
+.showImg {
+  width: 90%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.descriptionDiv {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  background-color: rgba(147, 199, 170, .7);
+  width: 50%;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 3% 2%;
+  color: black;
+  line-height: 35px;
+}
+
+.showButton {
+  font-size: 1.5rem;
+}
+
+.showLabel {
+  font-size: 1.3rem;
+}
+
+.showText {
+  font-size: 1.3rem;
+}
+
+.buttons2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 4% 0;
+}
 
 /* EDIT PAGE */
 

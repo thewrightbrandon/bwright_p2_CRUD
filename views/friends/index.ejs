@@ -16,31 +16,37 @@
         <a class="btn btn-outline-primary" href="/friends/new">New Friend</a>
       </div>
 
-      <% for(let i = 0; i < friends.length; i++) { %>
-        <div class="card" style="width: 20rem;">
+      <div class="indexDiv">
 
-          <a href="/friends/<%=friends[i].id%>">
-            <% if(friends[i].img.includes('https://')) { %>
-              <img class="card-img-top indexImg" src="<%=friends[i].img%>" alt="Picture of <%=friends[i].name%>">
-            <% } else { %>
-              <img class="card-img-top indexImg" src="https://i.imgur.com/lHR3vHp.png" alt="Image Not Found">
-            <% } %>
-          </a>
+        <% for(let i = 0; i < friends.length; i++) { %>
+          <div class="card mt-4 mb-4" style="width: 18rem;">
 
-          <div class="card-body">
-            <h3 class="card-title"><u><%=friends[i].name%></u></h3>
-            <p class="card-text"><%=friends[i].breed%></p>
-            <p class="card-text"><%=friends[i].age%> Years Old</p>
+            <a href="/friends/<%=friends[i].id%>">
+              <% if(friends[i].img.includes('https://')) { %>
+                <img class="card-img-top indexImg" src="<%=friends[i].img%>" alt="Picture of <%=friends[i].name%>">
+              <% } else { %>
+                <img class="card-img-top indexImg" src="https://i.imgur.com/lHR3vHp.png" alt="Image Not Found">
+              <% } %>
+            </a>
 
-            <% if(friends[i].available === true) { %>
-              <p class="card-text">AVAILABLE</p>
+            <div class="card-body">
+
+              <h3 class="card-title"><u><%=friends[i].name%></u></h3>
+              <p class="card-text"><%=friends[i].breed%></p>
+              <p class="card-text"><%=friends[i].age%> Years Old</p>
+
+              <% if(friends[i].available === true) { %>
+                <p class="card-text">AVAILABLE</p>
               <% } else { %>
                 <p class="card-text">ADOPTION PENDING</p>
-                <% } %>
-          </div>
+              <% } %>
 
-        </div>
-      <% } %>
+            </div>
+
+          </div>
+        <% } %>
+
+      </div>
     </div>
   </body>
 </html>
