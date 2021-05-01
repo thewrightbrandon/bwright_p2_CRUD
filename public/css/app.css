@@ -115,12 +115,30 @@ li>a:hover {
   padding-left: 30px;
 }
 
+/* INDEX PAGE */
+
+
+
+/* EDIT PAGE */
+
+.buttons {
+  display: flex;
+}
+
+.editLabel {
+  font-size: 1.4em;
+}
+
+.buttons > input {
+  font-size: 1.5em;
+}
+
 /* SESSION/USER/ADMIN*/
 
 .newForm {
   display: flex;
   justify-content: center;
-  margin: 18% auto;
+  margin: 14% auto;
 }
 
 .sessionFieldset, .userSignupFieldset, .adminSignupFieldset {
@@ -173,6 +191,14 @@ legend {
   width: auto;
   font-size: 2em;
   text-align: right;
+}
+
+input {
+  font-family: 'Kosugi', sans-serif;
+}
+
+select {
+  font-family: 'Kosugi', sans-serif;
 }
 
 /* animations */
