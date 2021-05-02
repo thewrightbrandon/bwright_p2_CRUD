@@ -41,7 +41,5 @@ Adopt a pet today at: [So Many Friends!](https://so-many-friends.herokuapp.com/)
 -
 
 ## Wireframes
-![Wireframe1]()
-![Wireframe2]()
-![Wireframe3]()
-![Wireframe4]()
+![Wireframe1](https://i.imgur.com/R5Ej9vH.jpg)
+![Wireframe2](https://i.imgur.com/nel5YMI.jpg)
