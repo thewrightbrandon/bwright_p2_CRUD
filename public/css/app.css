@@ -148,7 +148,8 @@ li>a:hover {
 }
 
 .showH1 {
-  color: ghostwhite;
+  font-size: 4em;
+  font-family: 'Patrick Hand SC', cursive;
 }
 
 .showImg {
