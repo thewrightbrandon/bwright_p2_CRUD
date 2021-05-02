@@ -82,7 +82,8 @@ app.use('/sessions', userSessionsController)
 app.get('/', (req, res) => {
   res.render('friends/welcome.ejs',
     {
-      tabTitle: 'Welcome!'
+      tabTitle: 'Welcome!',
+      createdUser: req.body
     }
   )
 })
