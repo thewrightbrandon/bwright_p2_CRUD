@@ -12,9 +12,11 @@
 
       </nav>
 
-      <div class="newFriendButton">
-        <a class="btn btn-outline-primary" href="/friends/new">New Friend</a>
-      </div>
+      <% if(currentUser.userTypeId === 1) { %>
+        <div class="newFriendButton">
+          <a class="btn btn-outline-primary" href="/friends/new">New Friend</a>
+        </div>
+      <% } %>
 
       <div class="indexDiv">
 

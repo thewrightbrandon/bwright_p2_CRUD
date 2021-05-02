@@ -27,6 +27,7 @@ const PORT = process.env.PORT || 3003
 ///////////////////////////////////
 
 app.use(express.static('public'))
+app.use(express.static('public/js/app.js'))
 
 // populates req.body with parsed info from forms
 app.use(express.urlencoded({extended: true}))

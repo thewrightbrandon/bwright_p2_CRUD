@@ -7,7 +7,7 @@
 
     <div class="container">
 
-      <form class="newForm" action="/users" method="POST" />
+      <form class="newForm needs-validation" action="/users" method="POST" novalidate />
 
         <fieldset class="userSignupFieldset">
 
@@ -16,7 +16,10 @@
             <div class="row mb-4">
               <div class="col">
                 <label class="userSignupLabel" for="email">Email</label>
-                <input class="form-control" type="email" name="email" required />
+                <input class="form-control" id="email" type="email" name="email" required />
+                <div class="invalid-feedback">
+                  Invalid Email Address
+                </div>
               </div>
             </div>
 

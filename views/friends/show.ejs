@@ -35,13 +35,17 @@
                 <input class="btn btn-primary showButton" type="submit" value="ADOPT" />
               </form>
             <% } %>
-            <form action="/friends/<%=friend.id%>/edit" method="GET">
-              <input class="btn btn-success showButton" type="submit" value="UPDATE" />
-            </form>
 
-            <form action="/friends/<%=friend.id%>?_method=DELETE" method="POST">
-              <input class="btn btn-danger showButton" type="submit" value="DELETE"  />
-            </form>
+            <% if(currentUser.userTypeId === 1) { %>
+              <form action="/friends/<%=friend.id%>/edit" method="GET">
+                <input class="btn btn-success showButton" type="submit" value="UPDATE" />
+              </form>
+
+              <form action="/friends/<%=friend.id%>?_method=DELETE" method="POST">
+                <input class="btn btn-danger showButton" type="submit" value="DELETE"  />
+              </form>
+            <% } %>
+
           </div>
 
         </div>

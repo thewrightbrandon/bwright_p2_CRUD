@@ -32,17 +32,18 @@ sessions.post('/user', (req, res) => {
       console.log(err)
       // if user was not found do this
     } else if (!foundUser) {
-      res.send('Username does not exist. <a href="sessions/new">Try Again?</a>')
+      res.send('Username does not exist. <a href="/new">Try Again?</a>')
       // user was found do this
     } else {
       // comparing original password to generated hash password
       if(bcrypt.compareSync(req.body.password, foundUser.password)) {
         // if everything matches do this, user session has now started
         req.session.currentUser = foundUser
+        console.log(req.session.currentUser.userTypeId)
         res.redirect("/about")
       } else {
         // if password does not match do this
-        res.send('Password did not match. <a href="sessions/new">Try Again?</a>')
+        res.send('Password did not match. <a href="/new">Try Again?</a>')
       }
     }
   })
