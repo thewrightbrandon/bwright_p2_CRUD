@@ -26,23 +26,23 @@ Become an admin for full site access:
 ## Technologies Used
 - JavaScript/EJS
 - Express
-- Node.js
+- NodeJS
 - MonogoDB/Mongoose
-- CSS3
+- CSS3 / Bootstrap
 
 ## Tech Breakdown
--
--
--
--
--
+- Used NodeJS and Express to create a basic server.
+- Used JS and EJS to control the MVC file  structure and populate the application.
+- Used Mongoose to create data templates and data validation.
+- Used MongoDB to store created and updated objects.
+- Used CSS3 and Bootstrap to style the application and assist with responsive design.
 
 ## Unsolved Problems / Future Updates
--   
--
--  
--
--
+- Send the user a message when account is created successfully.  
+- Work more with custom backend validation.
+- Add google maps under the contact information.
+- Add static js file and utilize jquery.
+- Add a form that will allow the user to set up an appointment with a friend.
 
 ## Wireframes
 ![Wireframe1](https://i.imgur.com/R5Ej9vH.jpg)

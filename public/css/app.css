@@ -122,6 +122,12 @@ li>a:hover {
 
 /* INDEX PAGE */
 
+.indexButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .newFriendButton {
   text-align: right;
 }

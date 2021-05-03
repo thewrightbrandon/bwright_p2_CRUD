@@ -12,20 +12,22 @@
 
       </nav>
 
-      <div class="sortBy">
-        <button type="button" class="btn btn-outline-success menuBtn">Search By</button>
-        <div class="sortByOptions">
-          <a href="/friends">All</a> 
-          <a href="/friends/cats">Cats</a>
-          <a href="/friends/dogs">Dogs</a>
-        </div>
-      </div>
 
-      <% if(currentUser.userTypeId === 1) { %>
-        <div class="newFriendButton">
-          <a class="btn btn-outline-primary newBtn" href="/friends/new">New Friend</a>
+      <div class="indexButtons">
+        <div class="sortBy">
+          <button type="button" class="btn btn-outline-success menuBtn">Search By</button>
+          <div class="sortByOptions">
+            <a href="/friends">All</a>
+            <a href="/friends/cats">Cats</a>
+            <a href="/friends/dogs">Dogs</a>
+          </div>
         </div>
-      <% } %>
+        <% if(currentUser.userTypeId === 1) { %>
+          <div class="newFriendButton">
+            <a class="btn btn-outline-primary newBtn" href="/friends/new">New Friend</a>
+          </div>
+        <% } %>
+      </div>
 
       <div class="indexDiv">
 
