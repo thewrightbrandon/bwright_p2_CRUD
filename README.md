@@ -1,7 +1,7 @@
 # So Many Friends App
 Adopt a pet today at: [So Many Friends!](https://so-many-friends.herokuapp.com/)
 
-To become an admin, please sign up and log in at the following urls:
+Become an admin for full site access:
 - [Admin Sign Up](https://so-many-friends.herokuapp.com/admins/new_admin_secret_signup)
 - [Admin Log In](https://so-many-friends.herokuapp.com/sessions/new_admin)
 
