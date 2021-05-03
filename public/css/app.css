@@ -61,18 +61,12 @@ li>a:hover {
 
 /* ABOUT PAGE */
 
-.aboutH1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5% 0 2% 0;
-}
-
-.aboutH1 > h1 {
+.aboutHeader {
   font-family: 'Patrick Hand SC', cursive;
-  font-weight: bold;
+  text-align: center;
   font-size: 5em;
-  /* background-color: rgba(255, 255, 255); */
+  font-weight: bold;
+  margin: 4%;
 }
 
 .aboutCardText {
@@ -122,7 +116,7 @@ li>a:hover {
 }
 
 .newBtn, .menuBtn {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-family: 'Kosugi', sans-serif;
 }
 
@@ -133,22 +127,24 @@ li>a:hover {
 
 .sortByOptions {
   position: absolute;
-  background-color: rgba(255, 255, 255, .7);
-  box-shadow: 2px 2px 2px green;
+  background-color: rgba(255, 255, 255, .9);
   border-radius: 5px;
   z-index: 1;
   display: none;
+  text-align: center;
+  min-width: 100px;
 }
 
 .sortByOptions > a {
   color: rgba(99, 185, 147, 1);
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-family: 'Kosugi', sans-serif;
 }
 
 .sortBy:hover .sortByOptions {
-  display: flex;
+  display: inline-block;
 }
 
 .indexDiv {
@@ -223,7 +219,7 @@ li>a:hover {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin: 4% 0;
+  margin: 3% 0;
 }
 
 /* EDIT PAGE */
