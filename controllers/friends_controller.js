@@ -223,6 +223,12 @@ router.put('/:id/adopt', (req, res) => {
   Friend.findById(req.params.id, (err, foundFriend) => {
     foundFriend.save(foundFriend.available = false)
     res.redirect(`/friends/${foundFriend.id}`)
+    // const today = new Date()
+    // console.log(today)
+    // if(today > Date())
+    setTimeout(() => {
+      foundFriend.save(foundFriend.available = true)
+    }, 86400000)
   })
 })
 
