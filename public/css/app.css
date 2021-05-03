@@ -1,8 +1,9 @@
 body {
-  background-image: url(https://i.imgur.com/tJjyeq5.jpg);
+  background-image: url(https://i.imgur.com/XOt3Hh7.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: right;
   font-family: 'Amaranth', sans-serif;
 }
 
@@ -15,7 +16,7 @@ body {
 }
 
 .background2 {
-  background-image: url(https://i.imgur.com/gLRnO1t.jpg);
+  background-image: url(https://i.imgur.com/ud4VwWI.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -76,12 +77,22 @@ li>a:hover {
 
 /* WELCOME PAGE */
 
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.welcomeLogo {
+  width: 35%;
+}
+
 .welcomeDiv {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   margin: 20% auto;
+  margin-top: 0;
   max-width: 600px;
 }
 
@@ -311,6 +322,10 @@ select {
 	animation: text-pop-up 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.slide-in-elliptic-bottom-fwd {
+	animation: slide-in-elliptic-bottom-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 @keyframes text-pop-up {
   0% {
     transform-origin: 50% 50%;
@@ -320,5 +335,18 @@ select {
   100% {
     transform-origin: 50% 50%;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes slide-in-elliptic-bottom-fwd {
+  0% {
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% -1400px;
+    opacity: 1;
   }
 }
