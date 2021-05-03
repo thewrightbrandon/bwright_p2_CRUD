@@ -4,9 +4,10 @@ const express = require('express')
 // const { window } = new JSDOM( "" );
 // const $ = require( "jquery" )( window )
 const users = express.Router()
+// passes in user model
 const User = require('../models/client_users.js')
 
-
+// get request will respond by rendering client_users_new.ejs
 users.get('/new', (req, res) => {
   res.render('users/client_users_new.ejs',
     {
@@ -16,10 +17,12 @@ users.get('/new', (req, res) => {
   )
 })
 
-
+// post request will create user at /users/
 users.post('/', (req, res) => {
+  // grabs the password input from req.body and hashes it a number of times
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
-  User.create(req.body, res, (err, createdUser) => {
+  // using the user template, takes req.body and creates new object
+  User.create(req.body, (err, createdUser) => {
    //  if(err) {
    //   $('.userConfirmation').text('Error')
    // } else {

@@ -1,9 +1,10 @@
 const bcrypt = require('bcrypt')
 const express = require('express')
 const sessions = express.Router()
+//passes in user model
 const User = require('../models/client_users.js')
 
-
+// get request will respond by rendering client_sessions_new.ejs
 sessions.get('/new', (req, res) => {
   res.render('sessions/client_sessions_new.ejs',
     {

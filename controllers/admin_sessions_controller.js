@@ -1,9 +1,10 @@
 const bcrypt = require('bcrypt')
 const express = require('express')
 const sessions = express.Router()
+// passes in admin model
 const Admin = require('../models/admin_users.js')
 
-
+// get request will respond by rendering admin_sessions_new.ejs
 sessions.get('/new_admin', (req, res) => {
   res.render('sessions/admin_sessions_new.ejs',
     {

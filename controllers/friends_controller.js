@@ -1,7 +1,9 @@
 const express = require('express')
+// passes in friend model
 const Friend = require('../models/friends.js')
 const router = express.Router()
 
+// will only allow currentUsers of userTypeId: 1 into certain paths of the site
 const isAuthenticated = (req, res, next) => {
   if(req.session.currentUser.userTypeId === 1) {
     return next()
