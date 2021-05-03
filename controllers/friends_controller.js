@@ -221,7 +221,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id/adopt', (req, res) => {
   Friend.findById(req.params.id, (err, foundFriend) => {
-    setTimeout((foundFriend.save(foundFriend.available = false), 5000)
+    foundFriend.save(foundFriend.available = false)
     res.redirect(`/friends/${foundFriend.id}`)
   })
 })

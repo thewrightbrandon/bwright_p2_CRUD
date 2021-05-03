@@ -32,7 +32,7 @@ sessions.post('/user', (req, res) => {
       console.log(err)
       // if user was not found do this
     } else if (!foundUser) {
-      res.send('Username does not exist. <a href="users/new">Try Again?</a>')
+      res.send('Username does not exist. <a href="/sessions/new">Try Again?</a>')
       // user was found do this
     } else {
       // comparing original password to generated hash password
@@ -43,7 +43,7 @@ sessions.post('/user', (req, res) => {
         res.redirect("/about")
       } else {
         // if password does not match do this
-        res.send('Password did not match. <a href="users/new">Try Again?</a>')
+        res.send('Password did not match. <a href="/sessions/new">Try Again?</a>')
       }
     }
   })
