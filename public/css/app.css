@@ -117,6 +117,40 @@ li>a:hover {
 
 /* INDEX PAGE */
 
+.newFriendButton {
+  text-align: right;
+}
+
+.newBtn, .menuBtn {
+  font-size: 1.5em;
+  font-family: 'Kosugi', sans-serif;
+}
+
+.sortBy {
+  position: relative;
+  display: inline-block;
+}
+
+.sortByOptions {
+  position: absolute;
+  background-color: rgba(255, 255, 255, .7);
+  box-shadow: 2px 2px 2px green;
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+}
+
+.sortByOptions > a {
+  color: rgba(99, 185, 147, 1);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.sortBy:hover .sortByOptions {
+  display: flex;
+}
+
 .indexDiv {
   display: flex;
   flex-wrap: wrap;
@@ -273,9 +307,6 @@ input {
 select {
   font-family: 'Kosugi', sans-serif;
 }
-
-/* TESTERS */
-
 
 
 /* animations */

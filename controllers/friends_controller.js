@@ -3,7 +3,7 @@ const Friend = require('../models/friends.js')
 const router = express.Router()
 
 const isAuthenticated = (req, res, next) => {
-  if(req.session.currentUser) {
+  if(req.session.currentUser.userTypeId === 1) {
     return next()
   } else {
     res.redirect('/sessions/new')
@@ -161,6 +161,38 @@ router.get('/', (req, res) => {
 })
 
 ///////////////////////////////////
+////// CATS ROUTE
+///////////////////////////////////
+
+router.get('/cats', (req, res) => {
+  Friend.find({type: 'Cat'}, (err, allCats) => {
+    res.render('friends/index.ejs',
+      {
+        friends: allCats,
+        tabTitle: 'Cats',
+        currentUser: req.session.currentUser,
+      }
+    )
+  })
+})
+
+///////////////////////////////////
+////// DOGS ROUTE
+///////////////////////////////////
+
+router.get('/dogs', (req, res) => {
+  Friend.find({type: 'Dog'}, (err, allDogs) => {
+    res.render('friends/index.ejs',
+      {
+        friends: allDogs,
+        tabTitle: 'Dogs',
+        currentUser: req.session.currentUser,
+      }
+    )
+  })
+})
+
+///////////////////////////////////
 ////// DELETE ROUTE
 ///////////////////////////////////
 
@@ -174,7 +206,7 @@ router.delete('/:id', (req, res) => {
 ////// NEW ROUTE
 ///////////////////////////////////
 
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
   res.render('friends/new.ejs',
     {
       tabTitle: 'New',
@@ -203,7 +235,7 @@ router.post('/', (req, res) => {
 ////// EDIT ROUTE
 ///////////////////////////////////
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
   Friend.findById(req.params.id, (err, foundFriend) => {
     res.render('friends/edit.ejs',
       {
@@ -236,7 +268,7 @@ router.put('/:id/adopt', (req, res) => {
 ////// UPDATE ROUTE
 ///////////////////////////////////
 
-router.put('/:id', (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => {
   if(req.body.available === 'on') {
       req.body.available = true;
     } else {
