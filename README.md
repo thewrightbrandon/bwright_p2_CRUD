@@ -6,7 +6,7 @@ Become an admin for full site access:
 - [Admin Log In](https://so-many-friends.herokuapp.com/sessions/new_admin)
 
 ## Explanation of App
-
+So Many Friends is a Full-Stack pet adoption web app with basic functionality. Once an account is created, users will be able to enter the site and learn about SMF and view the various friends that are up for adoption. If the user would like, they can put a hold on a friend. SMF admins will be able to add new friends, update existing friends, and hopefully delete friends once they are adopted! 
 
 ## User Stories
 - As a user, I want to be able to Sign Up
@@ -32,7 +32,7 @@ Become an admin for full site access:
 
 ## Tech Breakdown
 - Used NodeJS and Express to create a basic server.
-- Used JS and EJS to control the MVC file  structure and populate the application.
+- Used JS and EJS to control the MVC file structure and populate the application.
 - Used Mongoose to create data templates and data validation.
 - Used MongoDB to store created and updated objects.
 - Used CSS3 and Bootstrap to style the application and assist with responsive design.
