@@ -25,18 +25,19 @@
           <div class="row mt-4 mb-4">
             <div class="col-6">
               <label class="form-label editLabel">Name</label>
-              <input type="text" name="name" class="form-control" value="<%=friend.name%>"/>
+              <input type="text" name="name" class="form-control" value="<%=friend.name%>" required/>
             </div>
             <div class="col-6">
               <label class="form-label editLabel">Type of Animal</label>
-              <input type="text" name="type" class="form-control" value="<%=friend.type%>"/>
+              <input type="text" name="type" class="form-control" value="<%=friend.type%>" required/>
+              <small class="text-muted">*first letter must be capitalized</small>
             </div>
           </div>
 
           <div class="row mt-4 mb-4">
             <div class="col">
               <label class="form-label editLabel">Age</label>
-              <input type="text" name="age" class="form-control" value="<%=friend.age%>"/>
+              <input type="text" name="age" class="form-control" value="<%=friend.age%>" required/>
             </div>
             <div class="col">
               <label class="form-label editLabel">Breed</label>

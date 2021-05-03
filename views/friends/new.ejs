@@ -25,18 +25,19 @@
           <div class="row mb-4">
             <div class="col-6">
               <label class="form-label">Name</label>
-              <input type="text" name="name" class="form-control">
+              <input type="text" name="name" class="form-control" required>
             </div>
             <div class="col-6">
               <label class="form-label">Type of Animal</label>
-              <input type="text" name="type" class="form-control" placeholder="ie Dog, Cat, Rabbit, etc.">
+              <input type="text" name="type" class="form-control" placeholder="ie Dog, Cat, Rabbit, etc." required>
+              <small class="text-muted">*first letter must be capitalized</small>
             </div>
           </div>
 
           <div class="row mt-4 mb-4">
             <div class="col">
               <label class="form-label">Age</label>
-              <input type="text" name="age" class="form-control" placeholder="#">
+              <input type="text" name="age" class="form-control" placeholder="#" required>
             </div>
             <div class="col">
               <label class="form-label">Breed</label>
@@ -68,7 +69,7 @@
 
           <div class="col-12 mb-4">
             <div class="form-check">
-              <input class="form-check-input" name="available" type="checkbox" id="gridCheck">
+              <input class="form-check-input" name="available" type="checkbox" id="gridCheck" checked>
               <label class="form-check-label">Is Friend Available?</label>
             </div>
           </div>

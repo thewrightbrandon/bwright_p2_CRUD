@@ -167,7 +167,7 @@ li>a:hover {
 .indexDiv {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* SHOW PAGE */
