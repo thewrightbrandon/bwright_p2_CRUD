@@ -20,7 +20,7 @@ const db = mongoose.connection
 ////// PORT
 ///////////////////////////////////
 
-const PORT = process.env.PORT || 3003
+const PORT = 3000
 
 ///////////////////////////////////
 ////// MIDDLEWARE
