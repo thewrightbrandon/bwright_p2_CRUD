@@ -6,6 +6,7 @@ const express = require('express')
 const methodOverride  = require('method-override')
 const mongoose = require ('mongoose')
 const session = require('express-session')
+const MONGODB_URI = require('./env.js')
 
 ///////////////////////////////////
 ////// CONFIG
@@ -47,9 +48,6 @@ app.use(session({
 ///////////////////////////////////
 ////// DATABASE
 ///////////////////////////////////
-
-const MONGODB_URI = process.env.MONGODB_URI
-
 
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
 
