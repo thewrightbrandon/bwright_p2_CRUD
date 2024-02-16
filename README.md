@@ -1,9 +1,9 @@
 # So Many Friends App
-Adopt a pet today at: [So Many Friends!](https://so-many-friends.herokuapp.com/)
+Adopt a pet today at: [So Many Friends!](https://so-many-friends-ab3402db4584.herokuapp.com/)
 
 Become an admin for full site access:
-- [Admin Sign Up](https://so-many-friends.herokuapp.com/admins/new_admin_secret_signup)
-- [Admin Log In](https://so-many-friends.herokuapp.com/sessions/new_admin)
+- [Admin Sign Up](https://so-many-friends-ab3402db4584.herokuapp.com/admins/new_admin_secret_signup)
+- [Admin Log In](https://so-many-friends-ab3402db4584.herokuapp.com/sessions/new_admin)
 
 ## Explanation of App
 So Many Friends is a Full-Stack pet adoption web app with basic functionality. Once an account is created, users will be able to enter the site and learn about SMF and view the various friends that are up for adoption. If the user would like, they can put a hold on a friend. SMF admins will be able to add new friends, update existing friends, and hopefully delete friends once they are adopted! 
