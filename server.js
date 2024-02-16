@@ -38,7 +38,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'))
 
 app.use(session({
-    secret: FeedMeSeymour,
+    secret: "FeedMeSeymour",
     resave: false,
     saveUninitialized: false
   })
