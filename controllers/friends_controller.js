@@ -256,13 +256,13 @@ router.get('/:id/edit', isAuthenticated, (req, res) => {
 router.put('/:id/adopt', (req, res) => {
   Friend.findById(req.params.id, (err, foundFriend) => {
     foundFriend.save(foundFriend.available = false)
+    setTimeout(() => {
+      foundFriend.save(foundFriend.available = true)
+    }, 86400000)
     res.redirect(`/friends/${foundFriend.id}`)
     // const today = new Date()
     // console.log(today)
     // if(today > Date())
-    setTimeout(() => {
-      foundFriend.save(foundFriend.available = true)
-    }, 86400000)
   })
 })
 
