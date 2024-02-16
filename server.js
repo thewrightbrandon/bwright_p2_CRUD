@@ -50,6 +50,7 @@ app.use(session({
 
 const MONGODB_URI = process.env.MONGODB_URI
 
+
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
 
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
