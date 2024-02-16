@@ -38,7 +38,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'))
 
 app.use(session({
-    secret: process.env.SECRET,
+    secret: FeedMeSeymour,
     resave: false,
     saveUninitialized: false
   })
@@ -48,7 +48,7 @@ app.use(session({
 ////// DATABASE
 ///////////////////////////////////
 
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = "mongodb+srv://thewrightbrandon:95Z9S1V9o9yc2ala@project2.qyb4xyl.mongodb.net/too-many-friends?retryWrites=true&w=majority"
 
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
 
