@@ -48,7 +48,7 @@ app.use(session({
 ////// DATABASE
 ///////////////////////////////////
 
-const MONGODB_URI = "mongodb+srv://thewrightbrandon:95Z9S1V9o9yc2ala@project2.qyb4xyl.mongodb.net/too-many-friends?retryWrites=true&w=majority"
+const MONGODB_URI = process.env.MONGODB_URI
 
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
 
